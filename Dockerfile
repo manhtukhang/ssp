@@ -20,6 +20,7 @@ RUN cd /var/www/ && \
         rm -rf self-service-password-${SSP_VERSION}
 #COPY assets/favicon.ico /var/www/html/ssp/images/favicon.ico
 COPY assets/entrypoint.sh /entrypoint.sh
+COPY assets/ssp-site-apache.conf /etc/apache2/sites-available/ssp.conf
 RUN chmod +x /entrypoint.sh
 
 #VOLUME /var/www/html
